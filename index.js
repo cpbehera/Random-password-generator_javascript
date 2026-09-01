@@ -22,10 +22,12 @@ const createPassword = () => {
 
 copyEl.addEventListener('click', () => {
     copyPassword();
-    alertContainerEl.classList.add('active');
-    setTimeout(() => {
-        alertContainerEl.classList.remove('active');
-    }, 2000);
+    if (inputEl.value != "") {
+        alertContainerEl.classList.add('active');
+        setTimeout(() => {
+            alertContainerEl.classList.remove('active');
+        }, 2000);
+    }
 });
 
 const copyPassword = () => {
